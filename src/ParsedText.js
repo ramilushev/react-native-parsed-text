@@ -40,6 +40,11 @@ class ParsedText extends React.Component {
 
   getPatterns() {
     return this.props.parse.map((option) => {
+      
+      if (!option) {
+        return {}; 
+      }
+      
       const {type, ...patternOption} = option;
       if (type) {
         if (!PATTERNS[type]) {
