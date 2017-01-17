@@ -31,7 +31,7 @@ class TextExtraction {
         let textLeft = parsedText.children;
 
         while (textLeft) {
-          let matches = pattern.pattern.exec(textLeft);
+          let matches = pattern && pattern.pattern && pattern.pattern.exec(textLeft);
 
           if (!matches) { break; }
 
